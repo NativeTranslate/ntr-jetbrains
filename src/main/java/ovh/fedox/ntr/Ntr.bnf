@@ -1,0 +1,33 @@
+{
+  parserClass="ovh.fedox.ntr.parser.NtrParser"
+  parserUtilClass="ovh.fedox.ntr.parser.NtrParserUtil"
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Ntr"
+  psiImplClassSuffix="Impl"
+  psiPackage="ovh.fedox.ntr.psi"
+  psiImplPackage="ovh.fedox.ntr.psi.impl"
+
+  elementTypeHolderClass="ovh.fedox.ntr.psi.NtrTypes"
+  elementTypeClass="ovh.fedox.ntr.psi.NtrElementType"
+  tokenTypeClass="ovh.fedox.ntr.psi.NtrTokenType"
+
+  tokens=[
+    COMMENT='regexp:@.*'
+    CLASS='regexp:^[a-zA-Z0-9_]+'
+    FUNCTION='regexp:^\s+[a-zA-Z0-9_]+'
+    TAG='regexp:^\s{2,4}[a-zA-Z0-9_]+'
+    MEMBER='regexp:^\s{4,6}[a-zA-Z0-9_]+'
+    KEY='regexp:[a-zA-Z0-9_]+'
+    SEPARATOR='>'
+    VALUE='regexp:[^\n]*'
+    WHITE_SPACE='regexp:\s+'
+    CRLF='regexp:\R'
+  ]
+}
+
+ntrFile ::= item_*
+
+private item_ ::= (property|COMMENT|CLASS|FUNCTION|TAG|MEMBER|CRLF|WHITE_SPACE)
+
+property ::= KEY SEPARATOR VALUE

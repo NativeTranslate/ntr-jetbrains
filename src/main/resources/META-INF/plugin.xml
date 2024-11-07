@@ -1,0 +1,36 @@
+<idea-plugin>
+    <id>ovh.fedox.ntr</id>
+    <name>NativeTranslate Resource (.NTR)</name>
+    <version>1.0</version>
+    <vendor email="f3dox@proton.me" url="https://fedox.ovh">Fedox</vendor>
+
+    <description><![CDATA[
+      Adds support for .ntr files
+    ]]></description>
+
+    <change-notes><![CDATA[
+        Initial version
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType
+                name="NativeTranslate Resource"
+                implementationClass="ovh.fedox.ntr.NtrFileType"
+                fieldName="INSTANCE"
+                language="NTR"
+                extensions="ntr"/>
+        <lang.syntaxHighlighterFactory
+                language="NTR"
+                implementationClass="ovh.fedox.ntr.NtrSyntaxHighlighterFactory"/>
+
+        <colorSettingsPage implementation="ovh.fedox.ntr.NtrColorSettingsPage"/>
+        <annotator language="NTR" implementationClass="ovh.fedox.ntr.NtrAnnotator"/>
+    </extensions>
+
+    <resource-bundle>icons.NtrIcons</resource-bundle>
+
+    <actions>
+    </actions>
+</idea-plugin>
