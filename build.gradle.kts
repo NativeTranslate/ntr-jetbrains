@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "ovh.fedox"
-version = "1.0-SNAPSHOT"
+version = "1.2-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -35,8 +35,8 @@ dependencies {
 
 tasks {
     patchPluginXml {
-        sinceBuild.set("231")
-        untilBuild.set("243.*")
+        sinceBuild.set("221.*")
+        untilBuild.set("244.*")
     }
 }
 

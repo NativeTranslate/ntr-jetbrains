@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>ovh.fedox.ntr</id>
     <name>NativeTranslate Resource (.NTR)</name>
-    <version>1.0</version>
+    <version>1.2</version>
     <vendor email="f3dox@proton.me" url="https://fedox.ovh">Fedox</vendor>
 
     <description><![CDATA[
