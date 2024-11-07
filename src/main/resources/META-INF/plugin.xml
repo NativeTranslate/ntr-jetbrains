@@ -5,7 +5,10 @@
     <vendor email="f3dox@proton.me" url="https://fedox.ovh">Fedox</vendor>
 
     <description><![CDATA[
-      Adds support for .ntr files
+
+      This plugin adds support for the NativeTranslate Resource (.NTR) file format.
+      Used for translations in a minimalistic and simple way.
+
     ]]></description>
 
     <change-notes><![CDATA[
